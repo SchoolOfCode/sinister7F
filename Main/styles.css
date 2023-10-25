@@ -58,20 +58,20 @@ body {
 }
 
 .add-topic-expanded-open {
-  min-height: 200px;
-  max-height: auto;
+  min-height: 100px;
+  max-height: 10em;
 }
 
 .topic-input {
   margin: 10px 10px 0 10px;
-  height: 1.5em;
+  height: 3em;
   text-align: left;
 }
 
 .content-input {
   margin: 10px;
   min-height: 1.5em;
-  max-height: auto;
+  height: 10em;
   text-align: left;
   font-size: larger;
 }
