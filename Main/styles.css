@@ -101,19 +101,35 @@ body {
 
 /*Footer*/
 
-.navigation-footer {
-  background-color: var(--orange-app);
-  height: 3.5rem;
-  width: 80%;
-  border-radius: 50px;
-  left: auto;
-  right: auto;
+footer {
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  bottom: 1rem;
   position: fixed;
+  width: 100%;
+}
+.navigation-footer {
+  background-color: var(--orange-app);
+  height: 4.5rem;
+  border-radius: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navItem {
-margin: 2.8rem;
+  margin: 2.1rem;
+  color: var(--blue-app);
+  font-size: 1.5rem;
+  background-color: var(--orange-app);
+  border: solid 0.8rem var(--orange-app);
+  border-radius: 50px;
+}
+.active {
+  background-color: var(--white-app);
+  border: solid var(--white-app) 0.8rem;
+  border-radius: 50px;
 }
