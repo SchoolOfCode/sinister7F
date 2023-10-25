@@ -7,7 +7,9 @@
 * {
     box-sizing: border-box;
 }
-
+::placeholder {
+    color: var(--blue-app);
+}
 body {
     text-align: center;
     background-color:var(--white-app);
@@ -59,6 +61,7 @@ body {
     text-align: center;
     padding: 0;
     box-sizing: content-box;
+    color: var(--blue-app);
 }
 
 .searchbar-icon{
@@ -97,8 +100,39 @@ body {
     padding: 0;
     margin: 0;
     overflow-y: scroll;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .revision-list li {
+    display: grid;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-areas: 
+    "ti ti ti ti da"
+    "co co co co da";
+    color: var(--white-app);
+    background-color: var(--blue-app);
+    width: 85%;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    padding: 0.5em;
+    text-align: left;
+    align-items: start;
+}
+
+.ListTitle {
+    grid-area: ti;
+}
+.ListContent {
+    grid-area: co;
+    /* text-align: left; */
+    /* margin-left: 0.5em; */
+}
+
+.ListDate {
+    grid-area: da;
+    align-self: flex-end;
 }
 
 
