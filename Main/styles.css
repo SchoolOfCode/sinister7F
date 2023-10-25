@@ -1,0 +1,34 @@
+body {
+    text-align: center;
+}
+
+/* header */
+.app-header {
+    background-color: #fca311;
+    height: 5%;
+    color: #403f4c;
+
+}
+
+/*main*/
+
+.main-revision-topic {
+    max-height: 70%;
+}
+
+
+.revision-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+}
+.revision-list li {
+}
+
+
+/*Footer*/
+
+
+
+

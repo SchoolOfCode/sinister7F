@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Memory Echo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-        <header class="app-header">
-            <h1 class="app-header-title">Memory Echo</h1>
-        </header>
-        <div class="searchbar-container">
-            <input class="searchbar" type="text" placeholder="Search topic or subject">
-            <img class="searchbar-icon" src="" alt="">
-            <button></button>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-header-title">Memory Echo</h1>
+    </header>
+    <section class="search-add-section">
+      <div class="searchbar-container">
+        <input
+          class="searchbar"
+          type="text"
+          placeholder="Search topic or subject"
+        />
+        <div><i class="fa fa-fw fa-search"></i></div>
+      </div>
+
+      <div class="add-topic-container">
+        <button class="add-topic-button">Add new revision topic</button>
+        <div class="add-topic-expanded">
+          <input
+            class="topic-input"
+            type="text"
+            placeholder="Topic (required)"
+            required
+          />
+          <input
+            class="content-input"
+            type="text"
+            placeholder="Content (required)"
+            required
+          />
         </div>
+      </div>
+    </section>
 
-        <div class="add-topic-container">
-            <button class="add-topic-button">Add new revision topic</button>
-            <div class="add-topic-expanded"> 
-                <input class="topic-input" type="text" placeholder="Topic (required)" required>
-                <input class="content-input" type="text" placeholder="Content (required)" required>
-            </div>
-        </div>
+    <main class="main-revision-topic">
+      <h2>Saved Revision Topics</h2>
+      <div class="revision-list-container">
+        <ul class="revision-list">
+          <li class="list-item1 list">Loops, for loops</li>
+          <li class="list-item2 list">Objects, key value pairs</li>
+          <li class="list-item3 list">Functions, async functions</li>
+          <li class="list-item4 list">CSS, flexbox and grid</li>
+        </ul>
+      </div>
+    </main>
 
-        <main class="main-revision-topic">
-            <h2>Saved Revision Topics</h2>
-            <div class="revision-list-container">
-                <ul class="revision-list">
-                    <li class="list-item1 list">Loops, for loops</li>
-                    <li class="list-item2 list">Objects, key value pairs</li>
-                    <li class="list-item3 list">Functions, async functions</li>
-                    <li class="list-item4 list">CSS, flexbox and grid</li>
-                </ul>
-            </div>
-        </main>
-
-        <footer class="navigation-footer">
-            <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a>
-            <a href="#"><i class="fa fa-fw fa-calendar"></i></a>
-            <a href="#"><i class="fa fa-fw fa-user"></i></a>
-            <div class="identifier-background"></div>
-        </footer>
-</body>
+    <footer class="navigation-footer">
+      <a class="active" href="#"><i class="fa fa-fw fa-home"></i></a>
+      <a href="#"><i class="fa fa-fw fa-calendar"></i></a>
+      <a href="#"><i class="fa fa-fw fa-user"></i></a>
+      <div class="identifier-background"></div>
+    </footer>
+  </body>
 </html>
