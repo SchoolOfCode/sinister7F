@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color:#EEF0F2;
 }
 
 /* header */
@@ -8,6 +9,12 @@ body {
     height: 5%;
     color: #403f4c;
 
+}
+
+/* SECTION search-add-container */
+
+.searchbar{
+    width: 70%;
 }
 
 /*main*/
