@@ -47,7 +47,8 @@ body {
   height: 10em;
   text-align: left;
   font-size: larger;
-  .app-header {
+}
+.app-header {
     
     background-color: var(--orange-app);
     /* height: 2.5em; */
