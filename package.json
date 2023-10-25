@@ -1,0 +1,22 @@
+{
+  "name": "sinister7f",
+  "version": "1.0.0",
+  "description": "Feel free to delete this and start from scratch.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "morgan": "^1.10.0",
+    "playwright": "^1.39.0",
+    "supertest": "^6.3.3",
+    "vitest": "^0.34.6"
+  }
+}
