@@ -1,22 +1,53 @@
 body {
     text-align: center;
     background-color:#EEF0F2;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #403f4c;
 }
 
 /* header */
 .app-header {
     background-color: #fca311;
-    height: 5%;
+    height: 2.5em;
     color: #403f4c;
+    margin-bottom: 1em;
 
 }
 
 /* SECTION search-add-container */
-
-.searchbar{
-    width: 70%;
+.searchbar-container{
+    width: 100%;
 }
 
+.searchbar{
+    border: 0.3em #fca311 solid;
+    width: 80%;
+    height: 2em;
+    background-color: #EEF0F2;
+    border-radius: 1.2em;
+    position: relative;
+    margin-bottom: 1.5em;
+    text-align: center;
+    font-size: 1em;
+}
+
+.searchbar-icon{
+    position: absolute;
+    left: 82%;
+    top: 5.4em;
+}
+
+.add-topic-button{
+    border: 0.3em #fca311 solid;
+    width: 83.5%;
+    height: 2.9em;
+    background-color: #EEF0F2;
+    border-radius: 1.2em;
+    position: relative;
+    margin-bottom: 1.5em;
+    color: #403f4c;
+    font-size: 1em;
+}
 /*main*/
 
 .main-revision-topic {
