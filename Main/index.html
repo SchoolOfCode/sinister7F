@@ -28,23 +28,18 @@
       </div>
 
       <div class="add-topic-container">
-        <button class="add-topic-button">Add New Revision Topic</button>
-      </div>
-
-
-      <div class="add-topic-expanded">
-        <input
-          class="topic-input"
-          type="text"
-          placeholder="Topic (required)"
-          required
-        />
-        <input
-          class="content-input"
-          type="text"
-          placeholder="Content (required)"
-          required
-        />
+        <button type="submit" class="add-topic-button" onclick="expand()">
+          Add New Revision Topic
+        </button>
+        <div class="add-topic-expanded" id="add-expanded">
+          <textarea class="topic-input" placeholder="Topic (required)" required></textarea>
+          <textarea
+            class="content-input"
+            placeholder="Content (required)"
+            required rows="5" cols="50"
+          ></textarea>
+          <a class="add-button" href="#"><i class="fa-solid fa-circle-plus"></i></a>
+        </div>
       </div>
     </section>
 
@@ -70,5 +65,6 @@
       <a href="#"><i class="fa fa-fw fa-user"></i></a>
       <div class="identifier-background"></div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
