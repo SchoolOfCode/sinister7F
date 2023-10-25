@@ -1,72 +1,89 @@
 body {
-    text-align: center;
-    background-color:#EEF0F2;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #403f4c;
+  text-align: center;
+  background-color: #eef0f2;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #403f4c;
 }
 
 /* header */
 .app-header {
-    background-color: #fca311;
-    height: 2.5em;
-    color: #403f4c;
-    margin-bottom: 1em;
-
+  background-color: #fca311;
+  height: 2.5em;
+  color: #403f4c;
+  margin-bottom: 1em;
 }
 
 /* SECTION search-add-container */
-.searchbar-container{
-    width: 100%;
+.searchbar-container {
+  width: 100%;
 }
 
-.searchbar{
-    border: 0.3em #fca311 solid;
-    width: 80%;
-    height: 2em;
-    background-color: #EEF0F2;
-    border-radius: 1.2em;
-    position: relative;
-    margin-bottom: 1.5em;
-    text-align: center;
-    font-size: 1em;
+.searchbar {
+  border: 0.3em #fca311 solid;
+  width: 80%;
+  height: 2em;
+  background-color: #eef0f2;
+  border-radius: 1.2em;
+  position: relative;
+  margin-bottom: 1.5em;
+  text-align: center;
+  font-size: 1em;
 }
 
-.searchbar-icon{
-    position: absolute;
-    left: 82%;
-    top: 5.4em;
+.searchbar-icon {
+  position: absolute;
+  left: 82%;
+  top: 5.4em;
 }
 
-.add-topic-button{
-    border: 0.3em #fca311 solid;
-    width: 83.5%;
-    height: 2.9em;
-    background-color: #EEF0F2;
-    border-radius: 1.2em;
-    position: relative;
-    margin-bottom: 1.5em;
-    color: #403f4c;
-    font-size: 1em;
+.add-topic-button {
+  border: 0.3em #fca311 solid;
+  width: 80%;
+  height: 2.9em;
+  background-color: #eef0f2;
+  border-radius: 1.2em;
+  position: relative;
+  margin-bottom: 1.5em;
+  color: #403f4c;
+  font-size: 1em;
+}
+
+.add-topic-expanded {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  transition: max-height 0.5s;
+}
+
+.add-topic-expanded-open {
+    max-height: 200px;
+}
+
+.topic-input {
+ margin: 10px 10px 0 10px;
+ height: 1.5em;
+
+}
+
+.content-input {
+    margin: 10px;
+    height: 3em;
 }
 /*main*/
 
 .main-revision-topic {
-    max-height: 70%;
+  max-height: 70%;
 }
 
-
 .revision-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
 }
 .revision-list li {
 }
 
-
 /*Footer*/
-
-
-
-

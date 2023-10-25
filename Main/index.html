@@ -26,20 +26,18 @@
       </div>
 
       <div class="add-topic-container">
-        <button class="add-topic-button">Add New Revision Topic</button>
+        <button type="submit" class="add-topic-button">
+          Add New Revision Topic
+        </button>
         <div class="add-topic-expanded">
-          <input
-            class="topic-input"
-            type="text"
-            placeholder="Topic (required)"
-            required
-          />
-          <input
+          <textarea class="topic-input" placeholder="Topic (required)" required>
+          </textarea>
+          <textarea
             class="content-input"
-            type="text"
             placeholder="Content (required)"
             required
-          />
+          >
+          </textarea>
         </div>
       </div>
     </section>
@@ -62,5 +60,6 @@
       <a href="#"><i class="fa fa-fw fa-user"></i></a>
       <div class="identifier-background"></div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
