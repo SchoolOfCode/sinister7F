@@ -26,10 +26,10 @@
       </div>
 
       <div class="add-topic-container">
-        <button type="submit" class="add-topic-button">
+        <button type="submit" class="add-topic-button" onclick="expand()">
           Add New Revision Topic
         </button>
-        <div class="add-topic-expanded">
+        <div class="add-topic-expanded" id="add-expanded">
           <textarea class="topic-input" placeholder="Topic (required)" required>
           </textarea>
           <textarea

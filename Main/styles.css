@@ -58,18 +58,22 @@ body {
 }
 
 .add-topic-expanded-open {
-    max-height: 200px;
+  min-height: 200px;
+  max-height: auto;
 }
 
 .topic-input {
- margin: 10px 10px 0 10px;
- height: 1.5em;
-
+  margin: 10px 10px 0 10px;
+  height: 1.5em;
+  text-align: left;
 }
 
 .content-input {
-    margin: 10px;
-    height: 3em;
+  margin: 10px;
+  min-height: 1.5em;
+  max-height: auto;
+  text-align: left;
+  font-size: larger;
 }
 /*main*/
 
