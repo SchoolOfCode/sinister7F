@@ -1,20 +1,23 @@
 let expanded = document.getElementById("add-expanded");
 
-const apiEndpoint = "http://localhost:7777/topics";
+const apiEndpoint = "http://localhost:7777/topics/";
 
 function expand() {
   expanded.classList.toggle("add-topic-expanded-open");
 }
 
 //variable for revision list
-const revisionList = document.querySelector(".revision-list")
+const revisionList = document.querySelector(".revision-list");
 //
 async function refreshTopics() {
-  const response = await fetch(apiEndpoint);
+  const response = await fetch(apiEndpoint, {
+    mode: "cors",
+  });
+  console.log(response);
   const data = await response.json();
   revisionList.innerHTML = "";
 
-  for (const topics of data.payload) {
+  for (const topics of data.data) {
     renderTopic(topics);
   }
 }
@@ -29,7 +32,6 @@ async function renderTopic(topics) {
   topicContent.textContent = topics.content;
   topicContent.className = "ListContent";
 
-
   const topicDate = document.createElement("p");
   topicDate.textContent = topics.added_date;
   topicDate.className = "ListDate";
@@ -38,4 +40,4 @@ async function renderTopic(topics) {
   revisionList.appendChild(li);
 }
 
-document.addEventListener("load", refreshTopics());
+window.addEventListener("load", refreshTopics());
