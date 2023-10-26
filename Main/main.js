@@ -15,7 +15,7 @@ async function refreshTopics() {
   const response = await fetch(apiEndpoint, {
     mode: "cors",
   });
-  console.log(response);
+  // console.log(response);
   const data = await response.json();
   revisionList.innerHTML = "";
 
@@ -25,21 +25,26 @@ async function refreshTopics() {
 }
 
 async function postTopic(event) {
+
   event.preventDefault();
   const formData = new FormData(event.target);
-  let date = new Date();
-  const dateString = date.toLocaleDateString("US");
   const {topic, content} = Object.fromEntries(formData);
-  console.log({topic, content});
-  // {topic, content}.push({dateString});
+  const date = new Date();
+  const dateString = date.toLocaleDateString("US");
+
+
   const response = await fetch(apiEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({topic, content, dateString}),
+    body: JSON.stringify({
+      topic, 
+      content, 
+      added_date: dateString}),
   });
   const data = await response.json();
 
-  if (!response.ok || !data.success) {
+
+  if (data.status !== "success") {
     const message =
       data.error ?? "Sorry, an error occurred whilst creating a topic.";
     alert(message);
@@ -53,6 +58,10 @@ async function postTopic(event) {
 // Form submit event listener
 inputSubmit.addEventListener("submit", postTopic);
 
+
+
+
+
 // Displays the data in the unordered list
 async function renderTopic(topics) {
   const li = document.createElement("li");
@@ -65,7 +74,7 @@ async function renderTopic(topics) {
   topicContent.className = "ListContent";
 
   const topicDate = document.createElement("p");
-  console.log(topics.added_date);
+  // console.log(topics.added_date);
   topicDate.textContent = topics.added_date.substring(0, 10);
   topicDate.className = "ListDate";
 
