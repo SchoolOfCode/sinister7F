@@ -33,7 +33,8 @@ async function renderTopic(topics) {
   topicContent.className = "ListContent";
 
   const topicDate = document.createElement("p");
-  topicDate.textContent = topics.added_date;
+  console.log(topics.added_date);
+  topicDate.textContent = topics.added_date.substring(0, 10);
   topicDate.className = "ListDate";
 
   li.append(topicTitle, topicContent, topicDate);

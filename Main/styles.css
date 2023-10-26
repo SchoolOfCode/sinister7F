@@ -10,6 +10,13 @@
 }
 ::placeholder {
   color: var(--blue-app);
+  text-align: center;
+}
+.content-input::placeholder {
+  color: var(--white-app);
+}
+.topic-input::placeholder {
+  color: var(--white-app);
 }
 body {
   text-align: center;
@@ -29,25 +36,44 @@ body {
   display: flex;
   justify-content: space-evenly;
   transition: max-height 0.5s;
+  z-index: 2;
+  position: relative;
+  background-color: var(--white-app);
+  border-radius: 25px;
 }
 
 .add-topic-expanded-open {
   min-height: 100px;
-  max-height: 10em;
+  max-height: 100rem;
+  border: 0.1rem solid var(--blue-app);
 }
 
 .topic-input {
   margin: 10px 10px 0 10px;
-  height: 3em;
+  height: 2rem;
   text-align: left;
+  border-radius: 50px;
+  background-color: var(--blue-app);
+  color: var(--white-app);
 }
 
 .content-input {
   margin: 10px;
   min-height: 1.5em;
-  height: 10em;
+  height: 20em;
   text-align: left;
   font-size: larger;
+  border-radius: 20px;
+  color: var(--white-app);
+  background-color: var(--blue-app);
+}
+.add-button {
+  color: var(--blue-app);
+  background-color: var(--orange-app);
+  width: 3rem;
+  border-radius: 50px;
+  margin: 0 auto 5px auto;
+  padding-top: 0.3rem;
 }
 .app-header {
   background-color: var(--orange-app);
@@ -57,6 +83,8 @@ body {
   border-radius: 10px;
   padding-top: 1px;
   width: 100%;
+  height: 4rem;
+  border: 0.1rem solid var(--blue-app);
 }
 
 /* SECTION search-add-container */
@@ -100,7 +128,7 @@ body {
 .add-topic-container {
   width: 80%;
   height: 2em;
-  border: 0.1em var(--orange-app) solid;
+  border: 0.1em var(--blue-app) solid;
   border-radius: 1.2em;
   margin: auto;
   margin-bottom: 1.5em;
@@ -109,13 +137,12 @@ body {
 .add-topic-button {
   width: 100%;
   height: 100%;
-  background-color: var(--white-app);
+  background-color: var(--orange-app);
   border-radius: 1.2em;
   border: none;
   position: relative;
   color: var(--blue-app);
   padding: 0;
-  box-shadow: 10px 10px 20px var(--blue-app);
 }
 
 /*main*/
@@ -125,13 +152,14 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 1;
 }
 
 .revision-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  overflow-y: scroll;
   display: flex;
   /* flex-direction: column; */
   justify-content: center;
@@ -142,13 +170,15 @@ body {
   border-radius: 1.2rem;
   height: 35rem;
   border: solid 0.1rem var(--orange-app);
+  overflow-y: scroll;
+  padding-bottom: 2.5rem;
 }
 .revision-list li {
   display: grid;
-  grid-template-columns: repeat (5, 1fr);
+  grid-template-columns: repeat (4, 1fr);
   grid-template-areas:
-    "ti ti ti ti da"
-    "co co co co da";
+    "ti ti ti da"
+    "co co co co";
   color: var(--white-app);
   background-color: var(--blue-app);
   width: 85%;
@@ -158,41 +188,6 @@ body {
   padding: 0.5em;
   text-align: left;
   align-items: start;
-}
-/*Footer*/
-
-footer {
-  height: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  bottom: 1rem;
-  position: fixed;
-  width: 100%;
-}
-.navigation-footer {
-  background-color: var(--orange-app);
-  height: 4.5rem;
-  border-radius: 50px;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 10px 10px 25px;
-}
-
-.navItem {
-  margin: 2.1rem;
-  color: var(--blue-app);
-  font-size: 1.5rem;
-  background-color: var(--orange-app);
-  border: solid 0.8rem var(--orange-app);
-  border-radius: 50px;
-}
-.active {
-  background-color: var(--white-app);
-  border: solid var(--white-app) 0.8rem;
-  border-radius: 50px;
 }
 
 .ListTitle {
@@ -207,6 +202,44 @@ footer {
 .ListDate {
   grid-area: da;
   align-self: flex-end;
+}
+/*Footer*/
+
+footer {
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 1rem;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.navigation-footer {
+  background-color: var(--orange-app);
+  height: 4.5rem;
+  border-radius: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 25px;
+  border: 0.1rem solid var(--blue-app);
+  z-index: 2;
+}
+
+.navItem {
+  margin: 2.1rem;
+  color: var(--blue-app);
+  font-size: 1.5rem;
+  background-color: var(--orange-app);
+  border: solid 0.8rem var(--orange-app);
+  border-radius: 50px;
+}
+.active {
+  background-color: var(--white-app);
+  border: solid var(--white-app) 0.8rem;
+  border-radius: 50px;
 }
 
 /*Footer*/
