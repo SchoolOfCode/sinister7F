@@ -6,16 +6,18 @@
 
 * {
   box-sizing: border-box;
+  /* border: red solid 1px; */
 }
 ::placeholder {
-    color: var(--blue-app);
+  color: var(--blue-app);
 }
 body {
-    text-align: center;
-    background-color:var(--white-app);
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--blue-app);
-    margin: -10px 0 0 0;
+  text-align: center;
+  background-color: var(--white-app);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--blue-app);
+  margin: -10px auto 0 auto;
+  width: clamp(250px, 100%, 500px);
 }
 
 /* header */
@@ -47,14 +49,14 @@ body {
   text-align: left;
   font-size: larger;
 }
-.app-header {    
-    background-color: var(--orange-app);
-    /* height: 2.5em; */
-    color: var(--blue-app);
-    margin-bottom: 1em;
-    border-radius: 10px;
-    padding-top: 1px;
-    width: 100%;
+.app-header {
+  background-color: var(--orange-app);
+  /* height: 2.5em; */
+  color: var(--blue-app);
+  margin-bottom: 1em;
+  border-radius: 10px;
+  padding-top: 1px;
+  width: 100%;
 }
 
 /* SECTION search-add-container */
@@ -72,22 +74,22 @@ body {
   width: 80%;
   height: 2em;
   margin: auto;
-  border: 0.3em var(--orange-app) solid;
+  border: 0.1em var(--orange-app) solid;
   border-radius: 1.2em;
   margin-bottom: 1.5em;
   display: flex;
   justify-content: right;
   align-items: center;
 }
-.searchbar{
-    width: 80%;
-    background-color: var(--white-app);
-    border: none;
-    position: relative;
-    text-align: center;
-    padding: 0;
-    box-sizing: content-box;
-    color: var(--blue-app);
+.searchbar {
+  width: 80%;
+  background-color: var(--white-app);
+  border: none;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  box-sizing: content-box;
+  color: var(--blue-app);
 }
 
 .searchbar-icon {
@@ -98,7 +100,7 @@ body {
 .add-topic-container {
   width: 80%;
   height: 2em;
-  border: 0.3em var(--orange-app) solid;
+  border: 0.1em var(--orange-app) solid;
   border-radius: 1.2em;
   margin: auto;
   margin-bottom: 1.5em;
@@ -114,37 +116,43 @@ body {
   color: var(--blue-app);
   padding: 0;
 }
-  
+
 /*main*/
 
 .main-revision-topic {
   max-height: 70%;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 0.1rem var(--orange-app);
+  border-radius: 1.2rem;
+  height: 37.7rem;
 }
 
 .revision-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow-y: scroll;
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: scroll;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .revision-list li {
-    display: grid;
-    grid-template-columns: repeat (5, 1fr);
-    grid-template-areas: 
+  display: grid;
+  grid-template-columns: repeat (5, 1fr);
+  grid-template-areas:
     "ti ti ti ti da"
     "co co co co da";
-    color: var(--white-app);
-    background-color: var(--blue-app);
-    width: 85%;
-    margin-bottom: 1em;
-    border-radius: 1em;
-    padding: 0.5em;
-    text-align: left;
-    align-items: start;
+  color: var(--white-app);
+  background-color: var(--blue-app);
+  width: 85%;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  padding: 0.5em;
+  text-align: left;
+  align-items: start;
 }
 /*Footer*/
 
@@ -182,17 +190,17 @@ footer {
 }
 
 .ListTitle {
-    grid-area: ti;
+  grid-area: ti;
 }
 .ListContent {
-    grid-area: co;
-    /* text-align: left; */
-    /* margin-left: 0.5em; */
+  grid-area: co;
+  /* text-align: left; */
+  /* margin-left: 0.5em; */
 }
 
 .ListDate {
-    grid-area: da;
-    align-self: flex-end;
+  grid-area: da;
+  align-self: flex-end;
 }
 
 /*Footer*/
