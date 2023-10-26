@@ -38,4 +38,4 @@ async function renderTopic(topics) {
   revisionList.appendChild(li);
 }
 
-await refreshTopics ();
+document.addEventListener("load", refreshTopics());
