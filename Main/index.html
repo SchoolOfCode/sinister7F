@@ -28,22 +28,18 @@
       </div>
 
       <div class="add-topic-container">
-        <button class="add-topic-button">Add New Revision Topic</button>
-      </div>
-
-      <div class="add-topic-expanded">
-        <input
-          class="topic-input"
-          type="text"
-          placeholder="Topic (required)"
-          required
-        />
-        <input
-          class="content-input"
-          type="text"
-          placeholder="Content (required)"
-          required
-        />
+        <button type="submit" class="add-topic-button" onclick="expand()">
+          Add New Revision Topic
+        </button>
+        <div class="add-topic-expanded" id="add-expanded">
+          <textarea class="topic-input" placeholder="Topic (required)" required></textarea>
+          <textarea
+            class="content-input"
+            placeholder="Content (required)"
+            required rows="5" cols="50"
+          ></textarea>
+          <a class="add-button" href="#"><i class="fa-solid fa-circle-plus"></i></a>
+        </div>
       </div>
     </section>
 
@@ -51,7 +47,11 @@
       <h2>Saved Revision Topics</h2>
       <div class="revision-list-container">
         <ul class="revision-list">
-          <li class="list-item1 list">Loops, for loops</li>
+          <li class="list-item1 list">
+            <h3 class="ListTitle">Loops</h3>
+            <p class="ListContent">For Loops</p>
+            <p class="ListDate">2023-10-25</p>
+          </li>
           <li class="list-item2 list">Objects, key value pairs</li>
           <li class="list-item3 list">Functions, async functions</li>
           <li class="list-item4 list">CSS, flexbox and grid</li>
@@ -67,5 +67,6 @@
         <div class="identifier-background"></div>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>

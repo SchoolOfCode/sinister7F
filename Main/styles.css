@@ -7,24 +7,54 @@
 * {
   box-sizing: border-box;
 }
-
+::placeholder {
+    color: var(--blue-app);
+}
 body {
-  text-align: center;
-  background-color: var(--white-app);
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--blue-app);
-  margin: -10px 0 0 0;
+    text-align: center;
+    background-color:var(--white-app);
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blue-app);
+    margin: -10px 0 0 0;
 }
 
 /* header */
-.app-header {
-  background-color: var(--orange-app);
-  /* height: 2.5em; */
-  color: var(--blue-app);
-  margin-bottom: 1em;
-  border-radius: 10px;
-  padding-top: 1px;
-  width: 100%;
+
+.add-topic-expanded {
+  max-height: 0;
+  overflow: hidden;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-evenly;
+  transition: max-height 0.5s;
+}
+
+.add-topic-expanded-open {
+  min-height: 100px;
+  max-height: 10em;
+}
+
+.topic-input {
+  margin: 10px 10px 0 10px;
+  height: 3em;
+  text-align: left;
+}
+
+.content-input {
+  margin: 10px;
+  min-height: 1.5em;
+  height: 10em;
+  text-align: left;
+  font-size: larger;
+}
+.app-header {    
+    background-color: var(--orange-app);
+    /* height: 2.5em; */
+    color: var(--blue-app);
+    margin-bottom: 1em;
+    border-radius: 10px;
+    padding-top: 1px;
+    width: 100%;
 }
 
 /* SECTION search-add-container */
@@ -49,15 +79,15 @@ body {
   justify-content: right;
   align-items: center;
 }
-
-.searchbar {
-  width: 80%;
-  background-color: var(--white-app);
-  border: none;
-  position: relative;
-  text-align: center;
-  padding: 0;
-  box-sizing: content-box;
+.searchbar{
+    width: 80%;
+    background-color: var(--white-app);
+    border: none;
+    position: relative;
+    text-align: center;
+    padding: 0;
+    box-sizing: content-box;
+    color: var(--blue-app);
 }
 
 .searchbar-icon {
@@ -84,6 +114,7 @@ body {
   color: var(--blue-app);
   padding: 0;
 }
+  
 /*main*/
 
 .main-revision-topic {
@@ -91,14 +122,30 @@ body {
 }
 
 .revision-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow-y: scroll;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 .revision-list li {
+    display: grid;
+    grid-template-columns: repeat (5, 1fr);
+    grid-template-areas: 
+    "ti ti ti ti da"
+    "co co co co da";
+    color: var(--white-app);
+    background-color: var(--blue-app);
+    width: 85%;
+    margin-bottom: 1em;
+    border-radius: 1em;
+    padding: 0.5em;
+    text-align: left;
+    align-items: start;
 }
-
 /*Footer*/
 
 footer {
@@ -133,3 +180,19 @@ footer {
   border: solid var(--white-app) 0.8rem;
   border-radius: 50px;
 }
+
+.ListTitle {
+    grid-area: ti;
+}
+.ListContent {
+    grid-area: co;
+    /* text-align: left; */
+    /* margin-left: 0.5em; */
+}
+
+.ListDate {
+    grid-area: da;
+    align-self: flex-end;
+}
+
+/*Footer*/
