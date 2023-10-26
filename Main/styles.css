@@ -55,6 +55,7 @@ body {
   border-radius: 50px;
   background-color: var(--blue-app);
   color: var(--white-app);
+  padding: 0.5em;
 }
 
 .content-input {
@@ -66,6 +67,7 @@ body {
   border-radius: 20px;
   color: var(--white-app);
   background-color: var(--blue-app);
+  padding: 0.5em;
 }
 .add-button {
   color: var(--blue-app);
