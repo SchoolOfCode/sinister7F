@@ -1,5 +1,7 @@
 let expanded = document.getElementById("add-expanded");
 
+const inputSubmit = document.querySelector(".inputForm");
+
 const apiEndpoint = "http://localhost:7777/topics/";
 
 function expand() {
@@ -21,7 +23,37 @@ async function refreshTopics() {
     renderTopic(topics);
   }
 }
-//
+
+async function postTopic(event) {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  let date = new Date();
+  const dateString = date.toLocaleDateString("US");
+  const {topic, content} = Object.fromEntries(formData);
+  console.log({topic, content});
+  // {topic, content}.push({dateString});
+  const response = await fetch(apiEndpoint, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({topic, content, dateString}),
+  });
+  const data = await response.json();
+
+  if (!response.ok || !data.success) {
+    const message =
+      data.error ?? "Sorry, an error occurred whilst creating a topic.";
+    alert(message);
+    return;
+  }
+  
+  event.target.reset();
+  await refreshTopics();
+}
+
+// Form submit event listener
+inputSubmit.addEventListener("submit", postTopic);
+
+// Displays the data in the unordered list
 async function renderTopic(topics) {
   const li = document.createElement("li");
   const topicTitle = document.createElement("h3");

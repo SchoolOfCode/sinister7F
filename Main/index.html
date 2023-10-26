@@ -31,23 +31,25 @@
         <button type="submit" class="add-topic-button" onclick="expand()">
           Add New Revision Topic
         </button>
-        <div class="add-topic-expanded" id="add-expanded">
-          <textarea
-            class="topic-input"
-            placeholder="Topic (required)"
-            required
-          ></textarea>
-          <textarea
-            class="content-input"
-            placeholder="Content (required)"
-            required
-            rows="5"
-            cols="50"
-          ></textarea>
-          <a class="add-button" href="#"
-            ><i class="fa-solid fa-circle-plus"></i
-          ></a>
-        </div>
+        <form class="inputForm">
+          <div class="add-topic-expanded" id="add-expanded">
+            <textarea
+              class="topic-input"
+              placeholder="Topic (required)"
+              required
+            ></textarea>
+            <textarea
+              class="content-input"
+              placeholder="Content (required)"
+              required
+              rows="5"
+              cols="50"
+            ></textarea>
+            <button>
+              <i class="fa-solid fa-circle-plus"></i>
+            </button>
+          </div>
+        </form>
       </div>
     </section>
 
