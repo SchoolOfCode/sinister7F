@@ -115,6 +115,7 @@ body {
   position: relative;
   color: var(--blue-app);
   padding: 0;
+  box-shadow: 10px 10px 20px var(--blue-app);
 }
 
 /*main*/
@@ -177,6 +178,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 10px 10px 25px;
 }
 
 .navItem {
