@@ -25,22 +25,21 @@ async function refreshTopics() {
 }
 
 async function postTopic(event) {
-
   event.preventDefault();
   const formData = new FormData(event.target);
-  const {topic, content} = Object.fromEntries(formData);
+  const { topic, content } = Object.fromEntries(formData);
   const date = new Date();
 
   const response = await fetch(apiEndpoint, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      topic, 
-      content, 
-      added_date: date}),
+      topic,
+      content,
+      added_date: date,
+    }),
   });
   const data = await response.json();
-
 
   if (data.status !== "success") {
     const message =
@@ -48,22 +47,19 @@ async function postTopic(event) {
     alert(message);
     return;
   }
-  
+
   event.target.reset();
-  expanded.classList.toggle("add-topic-expanded-open")
+  expanded.classList.toggle("add-topic-expanded-open");
   await refreshTopics();
 }
 
 // Form submit event listener
 inputSubmit.addEventListener("submit", postTopic);
 
-
-
-
-
 // Displays the data in the unordered list
 async function renderTopic(topics) {
   const li = document.createElement("li");
+  li.className = "listOfTopics";
   const topicTitle = document.createElement("h3");
   topicTitle.textContent = topics.topic;
   topicTitle.className = "ListTitle";
@@ -82,3 +78,17 @@ async function renderTopic(topics) {
 }
 
 window.addEventListener("load", refreshTopics());
+
+// search function
+async function searchTopic() {
+  let search = document.getElementById("search-bar").value;
+  const listOfTopics = document.getElementsByClassName("listOfTopics");
+  // for loop which searches the api
+  for (let i = 0; i < listOfTopics.length; i++) {
+    if (!listOfTopics[i].innerHTML.toLowerCase().includes(search)) {
+      listOfTopics[i].style.display = "none";
+    } else {
+      listOfTopics[i].style.display = "grid";
+    }
+  }
+}
