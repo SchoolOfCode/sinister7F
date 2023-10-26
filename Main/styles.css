@@ -6,7 +6,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* font-family: 'Young Serif', serif; */
   /* border: red solid 1px; */
 }
@@ -31,7 +31,7 @@ body {
 
 /* header */
 .app-header-title {
-    font-family: 'Young Serif', serif;
+  font-family: "Young Serif", serif;
 }
 .add-topic-expanded {
   max-height: 0;
@@ -218,7 +218,7 @@ footer {
   align-items: center;
   bottom: 1rem;
   position: fixed;
-  width: 100%;
+  width: clamp(300px, 100%, 500px);
   z-index: 3;
 }
 .navigation-footer {
@@ -232,6 +232,7 @@ footer {
   box-shadow: 10px 10px 25px;
   border: 0.1rem solid var(--blue-app);
   z-index: 2;
+  width: clamp(315px, 80% 400px);
 }
 
 .navItem {
