@@ -30,8 +30,6 @@ async function postTopic(event) {
   const formData = new FormData(event.target);
   const {topic, content} = Object.fromEntries(formData);
   const date = new Date();
-  const dateString = date.toLocaleDateString("US");
-
 
   const response = await fetch(apiEndpoint, {
     method: "POST",
@@ -39,7 +37,7 @@ async function postTopic(event) {
     body: JSON.stringify({
       topic, 
       content, 
-      added_date: dateString}),
+      added_date: date}),
   });
   const data = await response.json();
 
