@@ -1,6 +1,6 @@
 let expanded = document.getElementById("add-expanded");
 
-const apiEndpoint = "http://localhost:7777/topics'";
+const apiEndpoint = "http://localhost:7777/topics";
 
 function expand() {
   expanded.classList.toggle("add-topic-expanded-open");
@@ -19,7 +19,7 @@ async function refreshTopics() {
   }
 }
 //
-function renderTopic(topics) {
+async function renderTopic(topics) {
   const li = document.createElement("li");
   const topicTitle = document.createElement("h3");
   topicTitle.textContent = topics.topic;
@@ -37,3 +37,5 @@ function renderTopic(topics) {
   li.append(topicTitle, topicContent, topicDate);
   revisionList.appendChild(li);
 }
+
+await refreshTopics ();
