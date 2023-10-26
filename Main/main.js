@@ -52,6 +52,7 @@ async function postTopic(event) {
   }
   
   event.target.reset();
+  expanded.classList.toggle("add-topic-expanded-open")
   await refreshTopics();
 }
 
