@@ -6,6 +6,8 @@
 
 * {
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /* font-family: 'Young Serif', serif; */
   /* border: red solid 1px; */
 }
 ::placeholder {
@@ -28,7 +30,9 @@ body {
 }
 
 /* header */
-
+.app-header-title {
+    font-family: 'Young Serif', serif;
+}
 .add-topic-expanded {
   max-height: 0;
   overflow: hidden;
