@@ -59,7 +59,7 @@ inputSubmit.addEventListener("submit", postTopic);
 // Displays the data in the unordered list
 async function renderTopic(topics) {
   const li = document.createElement("li");
-  li.className = "listOfTopics";
+
   const topicTitle = document.createElement("h3");
   topicTitle.textContent = topics.topic;
   topicTitle.className = "ListTitle";
@@ -69,9 +69,37 @@ async function renderTopic(topics) {
   topicContent.className = "ListContent";
 
   const topicDate = document.createElement("p");
-  // console.log(topics.added_date);
+
   topicDate.textContent = topics.added_date.substring(0, 10);
   topicDate.className = "ListDate";
+
+  const todayDate = new Date();
+  switch (topics.added_date.substring(8, 10)) {
+    // case (todayDate.getDate() - 1).toString():
+    //   li.className = "listOfTopics review";
+    //   break;
+    case (todayDate.getDate() - 3).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (todayDate.getDate() - 7).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (todayDate.getDate() - 21).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (todayDate.getDate() - 30).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (todayDate.getDate() - 45).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (todayDate.getDate() - 60).toString():
+      li.className = "listOfTopics review";
+      break;
+    default:
+      li.className = "listOfTopics";
+      break;
+  }
 
   li.append(topicTitle, topicContent, topicDate);
   revisionList.appendChild(li);

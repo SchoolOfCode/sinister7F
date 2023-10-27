@@ -186,7 +186,7 @@ body {
     "ti ti ti da"
     "co co co co";
   color: var(--white-app);
-  background-color: var(--blue-app);
+
   width: 85%;
   margin-top: 1rem;
   margin-bottom: 1em;
@@ -209,6 +209,15 @@ body {
   grid-area: da;
   align-self: flex-end;
 }
+
+.listOfTopics {
+  background-color: var(--blue-app);
+  order: 2;
+}
+.review {
+  background-color: red;
+  order: 1;
+}
 /*Footer*/
 
 footer {
@@ -225,14 +234,13 @@ footer {
   background-color: var(--orange-app);
   height: 4.5rem;
   border-radius: 50px;
-  width: 80%;
+  width: clamp(315px, 80% 400px);
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 10px 10px 25px;
   border: 0.1rem solid var(--blue-app);
   z-index: 2;
-  width: clamp(315px, 80% 400px);
 }
 
 .navItem {
