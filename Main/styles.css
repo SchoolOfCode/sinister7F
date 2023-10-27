@@ -181,10 +181,10 @@ body {
 }
 .revision-list li {
   display: grid;
-  grid-template-columns: repeat (4, 1fr);
+  grid-template-columns: repeat (5, 1fr);
   grid-template-areas:
-    "ti ti ti da"
-    "co co co co";
+    "ti ti ti da da"
+    "co co co co co";
   color: var(--white-app);
 
   width: 85%;
@@ -215,7 +215,7 @@ body {
   order: 2;
 }
 .review {
-  background-color: red;
+  background-color: #a50104;
   order: 1;
 }
 /*Footer*/
