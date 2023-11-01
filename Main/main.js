@@ -2,7 +2,7 @@ let expanded = document.getElementById("add-expanded");
 
 const inputSubmit = document.querySelector(".inputForm");
 
-const apiEndpoint = "http://localhost:7777/topics/";
+const apiEndpoint = "https://memoryecho.onrender.com";
 
 function expand() {
   expanded.classList.toggle("add-topic-expanded-open");
