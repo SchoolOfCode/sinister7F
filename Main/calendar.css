@@ -19,8 +19,8 @@ body {
   /* font-family: 'Young Serif', serif; */
   /* border: red solid 1px; */
 }
-.new-event-form hidden
-  @import url('https://fonts.googleapis.com/css?family=Muli');;
+/* .new-event-form hidden
+  @import url('https://fonts.googleapis.com/css?family=Muli');; */
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
      v2.0 | 20110126
@@ -205,7 +205,7 @@ table {
 /***** Container- calendar- Events ******/
 .container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin: 40px auto;
   padding: 20px;
   align-items: stretch;
@@ -348,14 +348,15 @@ table {
 }
 /****** Events ********/
 .event-container {
+  display: fixed;
   background-color: var(--white-app);
-  display: flex;
   width: 433px;
   height: 425px;
   border: 0.1px solid var(--blue-app);
   border-radius: 15px;
   overflow: hidden;
   overflow-y: auto;
+  left: 50%;
 }
 
 .events {
