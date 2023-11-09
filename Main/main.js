@@ -2,7 +2,7 @@ let expanded = document.getElementById("add-expanded");
 
 const inputSubmit = document.querySelector(".inputForm");
 
-const apiEndpoint = "http://localhost:7777/topics/";
+const apiEndpoint = "https://memoryecho.onrender.com/topics/";
 
 function expand() {
   expanded.classList.toggle("add-topic-expanded-open");
@@ -73,27 +73,52 @@ async function renderTopic(topics) {
   topicDate.textContent = topics.added_date.substring(0, 10);
   topicDate.className = "ListDate";
 
-  const todayDate = new Date();
-  switch (topics.added_date.substring(8, 10)) {
-    // case (todayDate.getDate() - 1).toString():
-    //   li.className = "listOfTopics review";
-    //   break;
-    case (todayDate.getDate() - 3).toString():
+  const testingDate = topics.added_date;
+
+  // const todayDate = new Date();
+
+  // Function to find the date which is 'n' number of days ago
+  const daysAgo = n => {
+    // Set the d variable to todays date
+    let d = new Date();
+
+    // Get the date from d and minus the number of days
+    // We then re-set the date of d using .setDate() with the new date
+    d.setDate(d.getDate() - n);
+
+    // console.log(d.toISOString())
+    // console.log(d.toISOString().split('T'))
+    // console.log(d.toISOString().split('T')[0])
+
+    // .toISOString set the date to a specific format as a string
+    // .split('T') then splits that date at the time point into an array
+    // After the split, return the string at index [0]
+    return d.toISOString().split('T')[0];
+  };
+
+  // console.log(daysAgo(1))
+  // console.log(testingDate.split('T')[0])
+
+  switch (testingDate.substring(0, 10)) {
+    case (daysAgo(1)):
       li.className = "listOfTopics review";
       break;
-    case (todayDate.getDate() - 7).toString():
+    case (daysAgo(3)).toString():
       li.className = "listOfTopics review";
       break;
-    case (todayDate.getDate() - 21).toString():
+    case (daysAgo(7)).toString():
       li.className = "listOfTopics review";
       break;
-    case (todayDate.getDate() - 30).toString():
+    case (daysAgo(21)).toString():
       li.className = "listOfTopics review";
       break;
-    case (todayDate.getDate() - 45).toString():
+    case (daysAgo(30)).toString():
       li.className = "listOfTopics review";
       break;
-    case (todayDate.getDate() - 60).toString():
+    case (daysAgo(45)).toString():
+      li.className = "listOfTopics review";
+      break;
+    case (daysAgo(60)).toString():
       li.className = "listOfTopics review";
       break;
     default:
