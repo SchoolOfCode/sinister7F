@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Echo Calendar</title>
+    <link rel="stylesheet" href="calendar.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1 class="app-header-title">Memory Echo</h1>
+    </header>
+    <section class="search-add-section">
+      <div class="searchbar-container">
+        <input
+          class="searchbar"
+          type="text"
+          onkeyup="searchTopic()"
+          id="search-bar"
+          placeholder="Search topic or subject"
+        />
+        <div class="searchbar-icon">
+          <i class="fa fa-fw fa-search"></i>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="calendar">
+          <div class="date-header">
+            <span id="prev" class="time-skip">prev</span>
+            <div class="year-month">
+              <span class="month"></span>
+              <span class="year"></span>
+            </div>
+            <span id="next" class="time-skip">next</span>
+          </div>
+          <table class="days-body">
+            <thead>
+              <tr class="days-row">
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th class="weekend">Sat</th>
+                <th class="weekend">Sun</th>
+              </tr>
+            </thead>
+            <tbody class="calendar-days"></tbody>
+          </table>
+          <form class="select-date">
+            <label for="month">Go To: </label>
+            <select name="month" id="month">
+              <option value="0">Jan</option>
+              <option value="1">Feb</option>
+              <option value="2">Mar</option>
+              <option value="3">Apr</option>
+              <option value="4">May</option>
+              <option value="5">Jun</option>
+              <option value="6">Jul</option>
+              <option value="7">Aug</option>
+              <option value="8">Sep</option>
+              <option value="9">Oct</option>
+              <option value="10">Nov</option>
+              <option value="11">Dec</option>
+            </select>
+            <input type="number" min="1" id="year" />
+          </form>
+        </div>
+        <div class="event-container">
+          <div class="events visible">
+            <span class="no-Events event-message"
+              >There are no events today</span
+            >
+            <button class="show-event-form rotate">Add new event</button>
+          </div>
+          <form class="new-event-form hidden">
+            <legend>Submit New Event</legend>
+            <input
+              id="new-event-desc"
+              type="text"
+              name="desc"
+              placeholder="desc"
+            />
+            <input type="submit" class="submit-event rotate" value="submit" />
+          </form>
+        </div>
+      </div>
+      <footer>
+        <div class="navigation-footer">
+          <a class="navItem" href="#"><i class="fa fa-fw fa-home"></i></a>
+          <a class="navItem active" href="#"
+            ><i class="fa fa-fw fa-calendar"></i
+          ></a>
+          <a class="navItem" href="./index.html"
+            ><i class="fa fa-fw fa-user"></i
+          ></a>
+          <div class="identifier-background"></div>
+        </div>
+      </footer>
+      <script type="text/javascript" src="calendar.js" async></script>
+    </section>
+  </body>
+</html>
